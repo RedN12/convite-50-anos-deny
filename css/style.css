@@ -1,0 +1,1991 @@
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+
+    background-color: #0b0a08;
+    color: #e8dfc9;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* ========================================
+   SEÇÕES
+======================================== */
+
+.secao {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+
+/* ========================================
+   SEÇÃO 01 — ARQUIVO CONFIDENCIAL
+======================================== */
+
+.secao-arquivo {
+    min-height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 24px;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 35%,
+            rgba(130, 96, 45, 0.18),
+            transparent 55%
+        ),
+
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.45)
+        ),
+
+        repeating-linear-gradient(
+         90deg,
+            #17110c 0px,
+            #21170f 4px,
+            #130d08 9px,
+            #1b130c 14px,
+            #110b07 20px
+    );
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* ========================================
+   DOSSIÊ
+======================================== */
+
+.dossie {
+    width: min(88vw, 390px);
+    min-height: 500px;
+
+    padding: 55px 30px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 20% 15%,
+             rgba(255, 255, 255, 0.035),
+            transparent 18%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+             rgba(0, 0, 0, 0.3),
+            transparent 30%
+        ),
+        repeating-linear-gradient(
+            0deg,
+             rgba(255, 255, 255, 0.008) 0px,
+             rgba(255, 255, 255, 0.008) 1px,
+            transparent 1px,
+            transparent 4px
+        ),
+        linear-gradient(
+            145deg,
+            #242019,
+            #17140f 55%,
+            #12100c
+        );
+
+    border: 1px solid #6e5a32;
+
+    transform: rotate(-1deg);
+
+    overflow: hidden;
+}
+
+.dossie::before {
+    content: "";
+
+    position: absolute;
+
+    top: -30%;
+    left: -20%;
+
+    width: 80%;
+    height: 160%;
+
+    background: linear-gradient(
+        110deg,
+        transparent 20%,
+        rgba(255, 236, 190, 0.035) 50%,
+        transparent 75%
+    );
+
+    transform: rotate(8deg);
+
+    pointer-events: none;
+}
+
+/* ========================================
+   DETALHES FÍSICOS DO DOSSIÊ
+======================================== */
+
+.dossie::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 10px;
+
+    border: 1px solid rgba(182, 154, 91, 0.12);
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   SOMBRA DO DOSSIÊ
+======================================== */
+
+.dossie {
+    box-shadow:
+        0 35px 65px rgba(0, 0, 0, 0.8),
+        0 18px 25px rgba(0, 0, 0, 0.5),
+        8px 8px 0 rgba(18, 14, 10, 0.9),
+        10px 10px 0 rgba(74, 57, 34, 0.35),
+        inset 0 0 45px rgba(0, 0, 0, 0.45),
+        inset 0 0 8px rgba(255, 255, 255, 0.025);
+}
+
+/* ========================================
+   TEXTOS DO DOSSIÊ
+======================================== */
+
+.titulo-arquivo {
+    width: 100%;
+
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-align: left;
+
+    color: #c6ad72;
+}
+
+/* ========================================
+   CABEÇALHO DO DOSSIÊ
+======================================== */
+
+.cabecalho-dossie {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 15px;
+}
+
+.classificacao {
+    font-family: Arial, sans-serif;
+
+    font-size: 8px;
+    letter-spacing: 1.5px;
+
+    color: #756849;
+
+    text-align: right;
+}
+
+
+/* ========================================
+   LINHA DE IDENTIFICAÇÃO
+======================================== */
+
+.linha-dossie {
+    width: 100%;
+
+    height: 1px;
+
+    margin-top: 15px;
+
+    background: linear-gradient(
+        to right,
+        #6e5a32,
+        rgba(110, 90, 50, 0.15)
+    );
+
+    opacity: 0.65;
+}
+
+
+/* ========================================
+   RODAPÉ DO DOSSIÊ
+======================================== */
+
+.rodape-dossie {
+    width: 100%;
+
+    margin-top: auto;
+    margin-bottom: 35px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+    color: #756849;
+
+    opacity: 0.75;
+}
+
+
+.numero-dossie {
+    margin-top: 110px;
+
+    font-size: 30px;
+    letter-spacing: 5px;
+    text-align: center;
+
+    color: #e8dfc9;
+}
+
+
+/* ========================================
+   CARIMBO
+======================================== */
+
+.carimbo {
+    margin-top: 60px;
+
+    padding: 8px 14px;
+
+    border: 2px solid #642d2d;
+
+    color: #7e3535;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    transform: rotate(-7deg);
+
+    opacity: 0.9;
+}
+
+
+/* ========================================
+   ACESSO RESTRITO
+======================================== */
+
+.acesso-restrito {
+    margin-top: auto;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #85795f;
+}
+
+
+/* ========================================
+   BOTÃO ABRIR
+======================================== */
+
+.botao-abrir {
+    margin-top: 35px;
+
+    padding: 15px 25px;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    border: 1px solid #b69a5b;
+
+    color: #d8c28a;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.botao-abrir:hover {
+    background-color: #b69a5b;
+    color: #0b0a08;
+}
+
+
+.botao-abrir:active {
+    transform: scale(0.97);
+}
+
+/* ========================================
+   ABERTURA DO DOSSIÊ
+========================================= */
+
+.dossie.aberto {
+    transform: rotate(-1deg) scaleX(0.02);
+    opacity: 0;
+    transform-origin: left center;
+
+    transition:
+        transform 0.9s ease-in,
+        opacity 0.5s ease-in;
+}
+
+/* Botão desaparece junto com o dossiê */
+.secao-arquivo.aberta .botao-abrir {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+/* ========================================
+   SEÇÃO 02 — FICHA DO ALVO
+========================================= */
+
+.secao-alvo {
+    min-height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 30px 24px;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 20%,
+            rgba(116, 87, 42, 0.12),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            #11100d,
+            #17140f 50%,
+            #0c0b09
+        );
+
+    color: #e8dfc9;
+}
+
+
+/* Cabeçalho do documento */
+
+.secao-alvo > p:first-child,
+.secao-alvo > p:nth-child(2) {
+    width: 100%;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+
+    letter-spacing: 2px;
+    text-align: center;
+
+    color: #756849;
+
+    line-height: 1.5;
+}
+
+.secao-alvo > p:nth-child(2) {
+    margin-top: 5px;
+}
+
+
+/* Título */
+
+.secao-alvo h2 {
+    width: 100%;
+
+    margin-top: 12px;
+    margin-bottom: 30px;
+
+    font-size: 27px;
+    font-weight: normal;
+
+    letter-spacing: 3px;
+    text-align: center;
+
+    color: #c6ad72;
+}
+
+
+/* Dados do alvo */
+
+.dados-alvo {
+    width: 100%;
+    max-width: 600px;
+
+    padding: 25px 20px;
+
+    border-top: 1px solid rgba(182, 154, 91, 0.45);
+    border-bottom: 1px solid rgba(182, 154, 91, 0.25);
+
+    background: rgba(0, 0, 0, 0.18);
+}
+
+.dados-alvo p {
+    margin-bottom: 14px;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: #d8d0bd;
+}
+
+.dados-alvo p:last-child {
+    margin-bottom: 0;
+}
+
+.dados-alvo strong {
+    display: inline-block;
+
+    min-width: 125px;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    color: #a58b56;
+}
+
+
+/* Fotografia */
+
+.foto-alvo {
+    width: 180px;
+    height: 220px;
+
+    margin-top: 35px;
+
+    border: 1px solid rgba(182, 154, 91, 0.5);
+
+    background: #14120e;
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.5),
+        inset 0 0 18px rgba(0, 0, 0, 0.35);
+
+    overflow: hidden;
+}
+
+.foto-alvo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    filter:
+        grayscale(20%)
+        sepia(10%)
+        contrast(1.05);
+}
+
+
+/* Relatório */
+
+.relatorio {
+    width: 100%;
+    max-width: 650px;
+
+    margin-top: 35px;
+
+    padding: 25px 5px;
+
+    border-top: 1px solid rgba(182, 154, 91, 0.18);
+}
+
+.relatorio p {
+    font-size: 15px;
+    line-height: 1.8;
+
+    text-align: center;
+
+    color: #cfc6b2;
+}
+
+
+/* Convocação */
+
+.convocacao {
+    width: 100%;
+    max-width: 600px;
+
+    margin-top: 35px;
+
+    text-align: center;
+}
+
+.convocacao h2 {
+    margin: 0 0 12px;
+
+    font-size: 24px;
+
+    color: #e8dfc9;
+}
+
+.convocacao p {
+    font-size: 15px;
+
+    color: #a58b56;
+}
+
+/* ========================================
+   ARQUIVO ABERTO
+========================================= */
+
+.secao-arquivo.encerrada {
+    display: none;
+}
+
+/* ========================================
+   SEÇÃO 03 — O ANIVERSÁRIO
+========================================= */
+
+.secao-aniversario {
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 50px 24px;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 25%,
+            rgba(116, 87, 42, 0.14),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            #17140f,
+            #0f0e0b 55%,
+            #0b0a08
+        );
+
+    color: #e8dfc9;
+
+    text-align: center;
+}
+
+/* Título da Seção 03 */
+
+.secao-aniversario > h2 {
+    margin-bottom: 20px;
+
+    font-size: 28px;
+    font-weight: normal;
+
+    letter-spacing: 4px;
+
+    color: #c6ad72;
+}
+
+
+/* Texto de introdução */
+
+.secao-aniversario > p {
+    width: 100%;
+    max-width: 520px;
+
+    font-size: 15px;
+    line-height: 1.9;
+
+    color: #cfc6b2;
+
+    letter-spacing: 0.3px;
+}
+
+/* ========================================
+   INFORMAÇÕES DO EVENTO
+========================================= */
+
+.informacoes-evento {
+    width: 100%;
+    max-width: 500px;
+
+    margin-top: 45px;
+
+    padding: 30px 20px;
+
+    border-top: 1px solid rgba(182, 154, 91, 0.45);
+    border-bottom: 1px solid rgba(182, 154, 91, 0.25);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* 50 ANOS */
+
+.informacoes-evento h3 {
+    margin-bottom: 8px;
+
+    font-size: 34px;
+    font-weight: normal;
+
+    letter-spacing: 6px;
+
+    color: #e8dfc9;
+}
+
+
+/* Nome */
+
+.informacoes-evento h3 + p {
+    margin-bottom: 30px;
+
+    font-size: 16px;
+
+    letter-spacing: 0.5px;
+
+    color: #c6ad72;
+}
+
+
+/* Data e horário */
+
+.informacoes-evento > p:nth-of-type(2) {
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 2.5px;
+
+    color: #d8c28a;
+}
+
+.informacoes-evento > p:nth-of-type(3) {
+    margin-top: 10px;
+
+    font-size: 24px;
+
+    letter-spacing: 4px;
+
+    color: #e8dfc9;
+}
+
+
+/* Local */
+
+.informacoes-evento > p:nth-of-type(4) {
+    margin-top: 28px;
+
+    font-size: 14px;
+    line-height: 1.9;
+
+    color: #cfc6b2;
+}
+
+/* ========================================
+   BOTÃO — LOCALIZAÇÃO NO MAPA
+========================================= */
+
+.botao-mapa {
+    margin-top: 30px;
+
+    padding: 15px 24px;
+
+    border: 1px solid rgba(182, 154, 91, 0.8);
+
+    background: rgba(0, 0, 0, 0.3);
+
+    color: #d8c28a;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Quando passar o mouse */
+
+.botao-mapa:hover {
+    background-color: #b69a5b;
+    color: #0b0a08;
+}
+
+
+/* Quando clicar */
+
+.botao-mapa:active {
+    transform: scale(0.97);
+}
+
+/* ========================================
+   SEÇÃO 04 — O TRAJE
+========================================= */
+
+.secao-traje {
+    min-height: 100svh;
+
+    padding: 35px 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(116, 87, 42, 0.10),
+            transparent 45%
+        ),
+        #0b0a08;
+}
+
+
+/* Título */
+
+.secao-traje > h2 {
+    font-size: 28px;
+    font-weight: normal;
+
+    letter-spacing: 4px;
+
+    color: #c6ad72;
+
+    margin-bottom: 15px;
+}
+
+
+/* Subtítulo */
+
+.secao-traje > p {
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #cfc6b2;
+}
+
+
+/* Regras */
+
+.regras-traje {
+    margin-top: 30px;
+
+    width: 100%;
+    max-width: 400px;
+
+    padding: 25px 20px;
+
+    border-top: 1px solid rgba(182, 154, 91, 0.35);
+    border-bottom: 1px solid rgba(182, 154, 91, 0.20);
+}
+
+
+.regras-traje p {
+    font-size: 16px;
+
+    color: #e8dfc9;
+
+    margin: 12px 0;
+}
+
+
+/* Trajes proibidos */
+
+.traje-proibido {
+    margin-top: 40px;
+
+    width: 100%;
+    max-width: 400px;
+}
+
+
+.traje-proibido h3 {
+    margin-bottom: 25px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+
+    color: #8a3838;
+}
+
+/* ========================================
+   SEÇÃO 4.2 — IMAGEM PROIBIDA
+========================================= */
+
+.imagem-proibida {
+    width: min(90vw, 500px);
+
+    margin: 40px auto 0;
+
+    text-align: center;
+}
+
+.foto-camisa {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    border: 1px solid rgba(182, 154, 91, 0.45);
+
+    background:
+        linear-gradient(
+            145deg,
+            #242019,
+            #17140f 55%,
+            #12100c
+        );
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.55),
+        inset 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.foto-camisa img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.carimbo-proibido {
+    display: inline-block;
+
+    margin-top: -25px;
+
+    padding: 10px 18px;
+
+    position: relative;
+
+    border: 2px solid #642d2d;
+
+    color: #7e3535;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    transform: rotate(-6deg);
+
+    background: #0b0a08;
+}
+
+.variacao-proibida {
+    margin-top: 25px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+
+    color: #e8dfc9;
+}
+
+/* ========================================
+   SEÇÃO 05 — O BANQUETE
+========================================= */
+
+.secao-banquete {
+    min-height: auto;
+
+    padding: 60px 24px 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(116, 87, 42, 0.12),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            #17140f,
+            #0d0c0a
+        );
+
+    text-align: center;
+}
+
+.secao-banquete h2 {
+    margin-bottom: 45px;
+
+    color: #c6ad72;
+
+    font-size: 32px;
+    font-weight: normal;
+
+    letter-spacing: 5px;
+}
+
+/* ========================================
+   CARDÁPIO
+========================================= */
+
+.menu {
+    width: 100%;
+    max-width: 430px;
+
+    padding: 45px 25px;
+
+    position: relative;
+
+    border: 1px solid #6e5a32;
+
+    background:
+        radial-gradient(
+            circle at 20% 15%,
+            rgba(255, 255, 255, 0.025),
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at 80% 85%,
+            rgba(0, 0, 0, 0.3),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #211d16,
+            #15130f
+        );
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.6),
+        inset 0 0 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Moldura interna */
+
+.menu::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 10px;
+
+    border: 1px solid rgba(182, 154, 91, 0.18);
+
+    pointer-events: none;
+}
+
+/* ========================================
+   TÍTULOS DAS CATEGORIAS
+========================================= */
+
+.menu h3 {
+    margin-top: 35px;
+    margin-bottom: 14px;
+
+    color: #b69a5b;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+
+    letter-spacing: 3px;
+}
+
+/* Primeiro título */
+
+.menu h3:first-child {
+    margin-top: 0;
+}
+
+/* ========================================
+   ITENS DO CARDÁPIO
+========================================= */
+
+.menu p {
+    margin-bottom: 8px;
+
+    color: #e8dfc9;
+
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+/* ========================================
+   DIVISÕES ENTRE CATEGORIAS
+========================================= */
+
+.menu h3:not(:first-child)::before {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 1px;
+
+    margin: 0 auto 25px;
+
+    background: #6e5a32;
+
+    opacity: 0.6;
+}
+
+/* ========================================
+   SEÇÃO 06 — CONFIRMAÇÃO
+========================================= */
+
+.secao-confirmacao {
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 90px 24px 70px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 25%,
+            rgba(116, 87, 42, 0.12),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            #15120e,
+            #0d0c0a
+        );
+}
+
+.secao-confirmacao > h2 {
+    font-size: 30px;
+
+    letter-spacing: 4px;
+
+    color: #c6ad72;
+
+    margin-bottom: 25px;
+}
+
+.secao-confirmacao > p {
+    max-width: 500px;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #d8d0bd;
+
+    margin-bottom: 30px;
+}
+
+
+/* FORMULÁRIO */
+
+#formularioConfirmacao {
+    width: min(100%, 500px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* CARTÃO DO CONVIDADO */
+
+.convidado {
+    width: 100%;
+
+    padding: 28px 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #201c16,
+            #15130f
+        );
+
+    border: 1px solid rgba(182, 154, 91, 0.45);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.45),
+        inset 0 0 25px rgba(0, 0, 0, 0.25);
+
+    text-align: left;
+}
+
+.convidado h3 {
+    margin-bottom: 20px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #b69a5b;
+
+    text-align: center;
+}
+
+
+/* CAMPOS */
+
+.convidado label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #9b8a65;
+}
+
+.convidado input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 15px 12px;
+
+    margin-bottom: 22px;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    border: 1px solid rgba(182, 154, 91, 0.35);
+
+    color: #e8dfc9;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.convidado input:focus {
+    border-color: #b69a5b;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* BOTÃO ADICIONAR */
+
+#adicionarConvidado {
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 16px;
+
+    background: transparent;
+
+    border: 1px solid rgba(182, 154, 91, 0.55);
+
+    color: #c6ad72;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+#adicionarConvidado:hover {
+    background-color: #b69a5b;
+
+    color: #0b0a08;
+}
+
+#listaConvidados {
+    width: 100%;
+}
+
+#listaConvidados .convidado {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.cabecalho-convidado {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecalho-convidado h3 {
+    margin-bottom: 20px;
+}
+
+.remover-convidado {
+    position: absolute;
+    top: -8px;
+    right: 0;
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    border: 1px solid rgba(182, 154, 91, 0.45);
+
+    color: #b69a5b;
+
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+
+    line-height: 1;
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.remover-convidado:hover {
+    background-color: #b69a5b;
+    color: #0b0a08;
+    border-color: #b69a5b;
+}
+
+/* BOTÃO CONFIRMAR */
+
+.botao-confirmar {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 16px;
+
+    background: #a58b56;
+
+    border: 1px solid #b69a5b;
+
+    color: #0b0a08;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.botao-confirmar:hover {
+    background-color: #d1b875;
+}
+
+.botao-confirmar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.botao-confirmar:active {
+    transform: scale(0.98);
+}
+
+
+/* MENSAGEM DE SUCESSO */
+
+.mensagem-sucesso {
+    display: none;
+
+    width: min(100%, 500px);
+
+    margin-top: 30px;
+
+    padding: 30px 20px;
+
+    border-top: 1px solid #6e5a32;
+    border-bottom: 1px solid #6e5a32;
+}
+
+.mensagem-sucesso h2 {
+    margin-bottom: 18px;
+
+    font-size: 22px;
+
+    letter-spacing: 3px;
+
+    color: #c6ad72;
+}
+
+.mensagem-sucesso p {
+    margin-bottom: 12px;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    color: #d8d0bd;
+}
+
+
+/* ENCERRAMENTO */
+
+.encerramento {
+    width: 100%;
+
+    min-height: 350px;
+
+    margin-top: 70px;
+
+    padding-top: 45px;
+
+    border-top: 1px solid rgba(182, 154, 91, 0.3);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.encerramento p {
+    margin-bottom: 10px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #9b8a65;
+}
+
+.encerramento h2 {
+    margin: 20px 0 12px;
+
+    font-size: 20px;
+
+    letter-spacing: 3px;
+
+    color: #c6ad72;
+}
+
+.simbolo-corinthians {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 360px;
+    height: 360px;
+    transform: translate(-50%, -50%);
+    background-image: url("../img/corinthians.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.16;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.assinatura-final {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.assinatura-final p {
+    margin-bottom: 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: #e8dfc9;
+}
+
+.assinatura-final h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 5px;
+    color: #c6ad72;
+}
+
+/* ========================================
+   MENU LATERAL — VERSÃO FINAL
+========================================= */
+
+/* BOTÃO HAMBÚRGUER */
+.botao-menu {
+    position: fixed;
+
+    top: 20px;
+    right: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(15, 13, 10, 0.95);
+
+    border: 1px solid #b69a5b;
+
+    color: #d8c28a;
+
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+
+    cursor: pointer;
+
+    z-index: 2000;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+        opacity 0.35s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+/* MOSTRA O BOTÃO APÓS ABRIR O ARQUIVO */
+.secao-arquivo.aberta ~ .botao-menu {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* EFEITO DO BOTÃO */
+.botao-menu:hover {
+    background-color: #b69a5b;
+    color: #0b0a08;
+}
+
+
+/* ========================================
+   PAINEL LATERAL — ABRINDO PELA DIREITA
+========================================= */
+
+.menu-lateral {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    left: auto;
+
+    width: 82%;
+    max-width: 380px;
+    height: 100vh;
+    height: 100svh;
+
+    padding: 35px 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(116, 87, 42, 0.08),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            #211d17,
+            #15120e 60%,
+            #100e0b
+        );
+
+    border-left: 1px solid #6e5a32;
+    border-right: none;
+
+    box-shadow:
+        -15px 0 40px rgba(0, 0, 0, 0.65);
+
+    z-index: 3000;
+
+    /* FECHADO: ESCONDIDO À DIREITA */
+    transform: translateX(100%);
+
+    transition:
+        transform 0.4s ease;
+
+    overflow-y: auto;
+}
+
+/* MENU ABERTO */
+.menu-lateral.menu-aberto {
+    transform: translateX(0);
+}
+
+
+/* ========================================
+   CABEÇALHO DO MENU
+========================================= */
+
+.cabecalho-menu {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid rgba(182, 154, 91, 0.35);
+}
+
+.cabecalho-menu p {
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+
+    color: #c6ad72;
+}
+
+
+/* BOTÃO FECHAR */
+.cabecalho-menu button {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
+    border: 1px solid #6e5a32;
+
+    color: #d8c28a;
+
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   LINKS DO MENU
+========================================= */
+
+.menu-lateral a {
+    display: block;
+
+    padding: 18px 5px;
+
+    border-bottom: 1px solid rgba(182, 154, 91, 0.12);
+
+    color: #e8dfc9;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+    letter-spacing: 1.5px;
+
+    transition:
+        color 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+.menu-lateral a:hover {
+    color: #c6ad72;
+    padding-left: 10px;
+}
+
+/* ========================================
+   BLOQUEIO DA PRIMEIRA TELA
+========================================= */
+
+html.arquivo-bloqueado,
+body.arquivo-bloqueado {
+    overflow: hidden;
+}
+
+/* ========================================
+   DESKTOP — SEÇÃO 01
+======================================== */
+
+@media (min-width: 768px) {
+
+    .secao-arquivo {
+        padding: 60px 40px;
+    }
+
+    .dossie {
+        width: 460px;
+        min-height: 600px;
+        padding: 65px 40px;
+    }
+
+    .botao-abrir {
+        margin-top: 35px;
+        padding: 16px 28px;
+        font-size: 12px;
+        letter-spacing: 2.5px;
+    }
+
+}
+
+/* ========================================
+   DESKTOP — SEÇÃO 02
+======================================== */
+
+@media (min-width: 768px) {
+
+    .secao-alvo {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .secao-alvo > h2 {
+        font-size: 34px;
+        letter-spacing: 5px;
+    }
+
+    .dados-alvo {
+        width: min(100%, 700px);
+    }
+
+    .foto-alvo {
+        width: 200px;
+        height: 245px;
+    }
+
+    .relatorio {
+        max-width: 720px;
+    }
+
+    .convocacao {
+        max-width: 700px;
+    }
+
+}
+
+/* ========================================
+   DESKTOP — SEÇÃO 03
+======================================== */
+
+@media (min-width: 768px) {
+
+    .secao-aniversario {
+        padding: 80px 40px;
+    }
+
+    .secao-aniversario > h2 {
+        font-size: 36px;
+        letter-spacing: 6px;
+    }
+
+    .secao-aniversario > p {
+        max-width: 650px;
+        font-size: 17px;
+        line-height: 1.9;
+    }
+
+    .informacoes-evento {
+        max-width: 650px;
+        padding: 40px 50px;
+        margin-top: 55px;
+    }
+
+    .informacoes-evento h3 {
+        font-size: 40px;
+        letter-spacing: 7px;
+    }
+
+    .informacoes-evento h3 + p {
+        font-size: 18px;
+    }
+
+    .informacoes-evento > p:nth-of-type(2) {
+        font-size: 13px;
+        letter-spacing: 3px;
+    }
+
+    .informacoes-evento > p:nth-of-type(3) {
+        font-size: 28px;
+        letter-spacing: 5px;
+    }
+
+    .informacoes-evento > p:nth-of-type(4) {
+        max-width: 550px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+}
+
+/* ========================================
+   DESKTOP — SEÇÃO 04
+======================================== */
+
+@media (min-width: 768px) {
+
+    .secao-traje {
+        padding: 40px 40px;
+    }
+
+    .secao-traje > h2 {
+        font-size: 36px;
+        letter-spacing: 6px;
+    }
+
+    .secao-traje > p {
+        font-size: 17px;
+    }
+
+    .regras-traje {
+        max-width: 600px;
+        padding: 30px 40px;
+        margin-top: 40px;
+    }
+
+    .regras-traje p {
+        font-size: 18px;
+        margin: 14px 0;
+    }
+
+    .traje-proibido {
+        max-width: 600px;
+        margin-top: 55px;
+    }
+
+    .traje-proibido h3 {
+        font-size: 13px;
+        letter-spacing: 4px;
+    }
+
+    .imagem-proibida {
+        width: 420px;
+        max-width: 100%;
+        margin-top: 35px;
+    }
+
+    .variacao-proibida {
+        font-size: 19px;
+    }
+
+}
+
+/* ========================================
+   DESKTOP — SEÇÃO 05
+======================================== */
+
+@media (min-width: 768px) {
+
+    .secao-banquete {
+        padding: 80px 40px 60px;
+    }
+
+    .secao-banquete h2 {
+        font-size: 36px;
+        letter-spacing: 6px;
+        margin-bottom: 55px;
+    }
+
+    .menu {
+        max-width: 650px;
+        padding: 55px 70px;
+    }
+
+    .menu h3 {
+        font-size: 12px;
+        letter-spacing: 4px;
+        margin-top: 45px;
+        margin-bottom: 18px;
+    }
+
+    .menu p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .menu h3:not(:first-child)::before {
+        width: 70px;
+        margin-bottom: 30px;
+    }
+
+}
+
+/* ========================================
+   DESKTOP — SEÇÃO 06
+======================================== */
+
+@media (min-width: 768px) {
+
+    .secao-confirmacao {
+        padding: 100px 40px 80px;
+    }
+
+    .secao-confirmacao > h2 {
+        font-size: 36px;
+        letter-spacing: 6px;
+    }
+
+    .secao-confirmacao > p {
+        max-width: 650px;
+        font-size: 17px;
+        line-height: 1.9;
+        margin-bottom: 45px;
+    }
+
+    #formularioConfirmacao {
+        max-width: 650px;
+    }
+
+    .convidado {
+        padding: 35px 40px;
+    }
+
+    .convidado h3 {
+        font-size: 12px;
+        letter-spacing: 4px;
+        margin-bottom: 25px;
+    }
+
+    .convidado label {
+        font-size: 12px;
+        letter-spacing: 2.5px;
+    }
+
+    .convidado input {
+        padding: 16px 14px;
+        font-size: 16px;
+    }
+
+    #adicionarConvidado {
+        padding: 17px;
+        font-size: 12px;
+        letter-spacing: 2.5px;
+    }
+
+    .botao-confirmar {
+        padding: 17px;
+        font-size: 13px;
+        letter-spacing: 2.5px;
+    }
+
+    .mensagem-sucesso {
+        max-width: 650px;
+        padding: 40px 30px;
+    }
+
+    .mensagem-sucesso h2 {
+        font-size: 26px;
+        letter-spacing: 4px;
+    }
+
+    .mensagem-sucesso p {
+        font-size: 16px;
+    }
+
+    .encerramento {
+        max-width: 900px;
+        min-height: 420px;
+        margin-top: 90px;
+    }
+
+    .simbolo-corinthians {
+        width: 420px;
+        height: 420px;
+    }
+
+    .assinatura-final p {
+        font-size: 23px;
+        letter-spacing: 4px;
+    }
+
+    .assinatura-final h2 {
+        font-size: 34px;
+        letter-spacing: 6px;
+    }
+
+}
