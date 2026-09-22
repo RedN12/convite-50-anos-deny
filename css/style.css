@@ -192,7 +192,7 @@ input {
 
     font-size: 16px;
     letter-spacing: 3px;
-    text-align: left;
+    text-align: center;
 
     color: #c6ad72;
 }
@@ -495,6 +495,15 @@ input {
     color: #a58b56;
 }
 
+.linha-codinomes {
+    display: flex;
+    align-items: flex-start;
+}
+
+.linha-codinomes span {
+    flex: 1;
+}
+
 
 /* Fotografia */
 
@@ -717,9 +726,19 @@ input {
 }
 
 
+.atraso-evento {
+    margin-top: 4px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+
+    color: #a58b56;
+}
+
 /* Local */
 
-.informacoes-evento > p:nth-of-type(4) {
+.informacoes-evento > p:nth-of-type(5) {
     margin-top: 28px;
 
     font-size: 14px;
@@ -1116,13 +1135,18 @@ input {
 }
 
 .secao-confirmacao > h2 {
-    font-size: 30px;
+    width: 100%;
+    max-width: 500px;
+
+    margin-bottom: 20px;
+
+    font-size: 28px;
+    font-weight: normal;
 
     letter-spacing: 4px;
+    line-height: 1.35;
 
     color: #c6ad72;
-
-    margin-bottom: 25px;
 }
 
 .secao-confirmacao > p {
@@ -1489,6 +1513,24 @@ input {
     color: #c6ad72;
 }
 
+.lei-omerta {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+
+    margin: 0 !important;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #9b8a65;
+
+    z-index: 2;
+}
+
 /* ========================================
    MENU LATERAL — VERSÃO FINAL
 ========================================= */
@@ -1529,8 +1571,8 @@ input {
         color 0.3s ease;
 }
 
-/* MOSTRA O BOTÃO APÓS ABRIR O ARQUIVO */
-.secao-arquivo.aberta ~ .botao-menu {
+/* BOTÃO MENU SEMPRE VISÍVEL */
+.botao-menu {
     opacity: 1;
     pointer-events: auto;
 }
@@ -1705,7 +1747,7 @@ body.arquivo-bloqueado {
     }
 
     .botao-abrir {
-        margin-top: 35px;
+        margin-top: 5px;
         padding: 16px 28px;
         font-size: 12px;
         letter-spacing: 2.5px;
@@ -1794,7 +1836,7 @@ body.arquivo-bloqueado {
         letter-spacing: 5px;
     }
 
-    .informacoes-evento > p:nth-of-type(4) {
+    .informacoes-evento > p:nth-of-type(5) {
         max-width: 550px;
         font-size: 15px;
         line-height: 1.8;
@@ -1988,4 +2030,19 @@ body.arquivo-bloqueado {
         letter-spacing: 6px;
     }
 
+}
+
+.autoria-site {
+    position: relative;
+    z-index: 10;
+
+    margin-top: 25px;
+
+    color: #c6ad72;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-align: center;
+
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.9);
 }

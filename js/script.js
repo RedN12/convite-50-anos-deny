@@ -67,7 +67,10 @@ let numeroConvidado = 1;
 
 botaoAdicionar.addEventListener("click", function () {
 
-    numeroConvidado++;
+    const convidadosAtuais =
+        listaConvidados.querySelectorAll(".convidado").length;
+
+    numeroConvidado = convidadosAtuais + 2;
 
     const novoConvidado = document.createElement("div");
 
@@ -91,16 +94,21 @@ botaoAdicionar.addEventListener("click", function () {
     const botaoRemover = novoConvidado.querySelector(".remover-convidado");
 
     botaoRemover.addEventListener("click", function () {
-        novoConvidado.remove();
 
-        const convidados = listaConvidados.querySelectorAll(".convidado");
+    novoConvidado.remove();
 
-        convidados.forEach(function (convidado, indice) {
-            const numero = indice + 2;
+    const convidados = listaConvidados.querySelectorAll(".convidado");
 
-            convidado.querySelector("h3").textContent =
-                `CONVIDADO ${String(numero).padStart(2, "0")}`;
+    convidados.forEach(function (convidado, indice) {
+
+        const numero = indice + 2;
+
+        convidado.querySelector("h3").textContent =
+            `CONVIDADO ${String(numero).padStart(2, "0")}`;
+
         });
+
+        numeroConvidado = convidados.length + 2;
     });
 
 });
@@ -113,6 +121,7 @@ const botaoMenu = document.getElementById("botaoMenu");
 const menuLateral = document.getElementById("menuLateral");
 const fecharMenu = document.getElementById("fecharMenu");
 const linksMenu = document.querySelectorAll(".menu-lateral a");
+const linkDossie = document.querySelector('a[href="#dossie"]');
 
 
 // ABRIR / FECHAR MENU
@@ -142,6 +151,33 @@ linksMenu.forEach(function (link) {
         menuLateral.classList.remove("menu-aberto");
 
     });
+
+});
+
+// ========================================
+// VOLTAR PARA O DOSSIÊ
+// ========================================
+
+linkDossie.addEventListener("click", function (evento) {
+
+    evento.preventDefault();
+
+    // Fecha o menu
+    menuLateral.classList.remove("menu-aberto");
+
+    // Faz a capa voltar a existir
+    secaoArquivo.classList.remove("encerrada");
+
+    // Reseta o estado do dossiê
+    dossie.classList.remove("aberto");
+    secaoArquivo.classList.remove("aberta");
+
+    // Bloqueia novamente a rolagem
+    document.body.classList.add("arquivo-bloqueado");
+    document.documentElement.classList.add("arquivo-bloqueado");
+
+    // Volta para o topo
+    window.scrollTo(0, 0);
 
 });
 
